@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react'
-import { Row, Col, Carousel, Card, Button, Spinner } from 'react-bootstrap'
+import { Container, Row, Col, Carousel, Card, Button, Spinner } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import jwt_decode from 'jwt-decode'
@@ -44,37 +44,43 @@ export default function Home() {
   return (
     isAdmin ? <Redirect to='/admin' /> : <>
       <Carousel activeIndex={index} onSelect={handleSelect} interval={3000}>
-        <Carousel.Item>
+        <Carousel.Item className="carousel">
           <img
-            className="image-slide"
-            src="https://ae01.alicdn.com/kf/HTB1AhmcSXXXXXatXVXXq6xXFXXXI.jpg"
+            className="image-slide carousel-image"
+            src="https://i.pinimg.com/originals/82/dd/96/82dd96cd0aa099f021c42e88af818924.jpg"
             alt="Third slide"
           />
         </Carousel.Item>
-        <Carousel.Item>
+        <Carousel.Item className="carousel">
           <img
-            className="image-slide"
-            src="https://i.pinimg.com/originals/98/14/7d/98147d03785a0ba13e0337b43c382627.jpg"
+            className="image-slide carousel-image"
+            src="https://employer.jobsgo.vn/uploads/media/img/201712/pictures_library_7381_20171216083149_9831.jpg"
             alt="Third slide"
           />
         </Carousel.Item>
-        <Carousel.Item>
+        <Carousel.Item className="carousel">
           <img
-            className="image-slide"
-            src="https://dubaifitnesschallenge.com/wp-content/uploads/2019/10/DFC-breakfast-salad-1920x1080.jpg"
+            className="image-slide carousel-image"
+            src="https://zozotea.com/wp-content/uploads/back-to-school-banner.jpg"
             alt="Third slide"
           />
         </Carousel.Item>
       </Carousel>
 
       <Row>
-        <Col style={{ margin: "0 16px 8px", padding: "8px", backgroundColor: "rgb(20, 120, 130)", textAlign: 'center' }}>STALL</Col>
+        <Col className="category-header">Uống gì hôm nay?</Col>
       </Row>
 
+      <Container>
       {
         !!stall ? <>
-          <Button onClick={() => setStall('')} style={{ margin: '0 0 8px' }}>Back</Button>
-          {products ? <Row>
+          <Link className="back-button" onClick={() => setStall('')}>
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+            </svg>
+            Trở lại
+          </Link>
+          {products ? <Row className="mt-3">
             {products.filter(product => {
               if (stall)
                 return product.stall === stall
@@ -82,12 +88,12 @@ export default function Home() {
                 return product
             }).map((product, id) => {
               return <Col md={3} xs={6}>
-                <Card style={{ margin: 'auto', cursor: 'pointer' }}>
-                  <Card.Img style={{ minHeight: '200px', maxHeight: '200px' }} variant="top" src={`/images/${product.image}`} />
+                <Card className="card-size" style={{ margin: 'auto', cursor: 'pointer' }}>
+                  <Card.Img className="card-img" variant="top" src={`/images/${product.image}`} />
                   <Card.Body>
-                    <Card.Title>{product.name}</Card.Title>
+                    <Card.Title className="card-title">{product.name}</Card.Title>
                     <Card.Text>{product.price} VNĐ</Card.Text>
-                    <Button onClick={() => addProduct(product._id)} variant="primary">ADD</Button>
+                    <Button className="mt-auto add-to-cart" onClick={() => addProduct(product._id)} variant="primary">Mua ngay</Button>
                   </Card.Body>
                 </Card>
               </Col>
@@ -97,8 +103,8 @@ export default function Home() {
             {stalls ? stalls.map(stall => {
               return <Col md={3} xs={6}>
                 <Card onClick={() => setStall(stall._id)} style={{ margin: 'auto', cursor: 'pointer' }}>
-                  <Card.Img style={{ minHeight: '200px', maxHeight: '200px' }} variant="top" src={`/images/${stall.image}`} />
-                  <Card.Body>
+                  <Card.Img className="card-img" variant="top" src={`/images/${stall.image}`} />
+                  <Card.Body className="pb-0">
                     <Card.Title>{stall.name}</Card.Title>
                   </Card.Body>
                 </Card>
@@ -106,6 +112,8 @@ export default function Home() {
             }) : <Spinner animation="border" />}
           </Row>
       }
+      </Container>
+      
 
       <Row>
         <Col style={{ margin: "8px 16px 4px", padding: "8px", backgroundColor: "rgb(20, 120, 130)", textAlign: 'center' }}>

@@ -85,11 +85,11 @@ export default function Header() {
 
   return (
     <>
-      <Navbar fixed="top" bg="dark" variant="dark">
+      <Navbar fixed="top" bg="light" variant="dark">
         <Navbar.Brand href="/">
           <img
-            src="https://scontent.fdad1-1.fna.fbcdn.net/v/t1.15752-9/107902676_641039173459121_7538518412986259566_n.png?_nc_cat=100&_nc_sid=b96e70&_nc_ohc=K6JcOp03ofgAX--diFU&_nc_ht=scontent.fdad1-1.fna&oh=3d531858c39696e42fdb5ce8c9cdcd38&oe=5F30AD6D"
-            width="30"
+            src="https://firebasestorage.googleapis.com/v0/b/dev-web-app-551e1.appspot.com/o/Group%2030.svg?alt=media&token=56bada78-912b-4223-bb95-880e0408ad23"
+            width="270"
             height="30"
             className="d-inline-block align-top"
 
@@ -98,9 +98,9 @@ export default function Header() {
         {/* <Navbar.Toggle /> */}
         <Navbar.Collapse className="justify-content-end">
           {!isAuthenticated ? <>
-            <Link className="mr-3" to='/search'>Search</Link>
-            <Button className="mr-3" variant="primary" onClick={handleLoginClick}>Login</Button>{' '}
-            <Button className="mr-3" variant="primary" onClick={handleRegisterClick}>Register</Button>{' '}
+            <Link className="mr-3 header-button" to='/search'>Tìm kiếm</Link>
+            <Link className="mr-3 header-button" variant="primary" onClick={handleLoginClick}>Đăng nhập</Link>{' '}
+            <Link className="mr-3 header-button" variant="primary" onClick={handleRegisterClick}>Đăng ký</Link>{' '}
           </> : <>
               {
                 user && user.role != 'admin' ?

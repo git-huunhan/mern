@@ -20,13 +20,13 @@ function App() {
   return (
     <GlobalProvider>
       <Router>
-        <Container fluid>
+        <Container className="p-0" fluid>
           <Header />
           <Route exact path="/" component={Home} />
           <Route exact path="/checkout" component={Checkout} />
           <Route exact path="/Admin" component={Admin} />
           <Route exact path='/search' component={Search} />
-          <Footer />
+          
 
           <ToastContainer
             position="top-left"

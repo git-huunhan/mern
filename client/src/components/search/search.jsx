@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { Row, Col, Carousel, Card, Button, Spinner } from 'react-bootstrap';
+import { Container, Row, Col, Carousel, Card, Button, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import jwt_decode from 'jwt-decode';
@@ -51,11 +51,9 @@ const Search = () => {
   }
 
   return (
+    
     <React.Fragment>
-      <Row>
-        <Col style={{ margin: "10rem 16px 8px", padding: "8px", backgroundColor: "rgb(20, 120, 130)", textAlign: 'center' }}>STALL</Col>
-      </Row>
-
+      <Container className="search">
       <SearchBox onChange={onSearchChange} />
       {
         !stall ? <>
@@ -98,6 +96,8 @@ const Search = () => {
             }) : <Spinner animation="border" />}
           </Row>
       }
+      </Container>
+     
     </React.Fragment>
   )
 }

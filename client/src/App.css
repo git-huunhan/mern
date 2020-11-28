@@ -11,3 +11,59 @@
 .minus-icon:hover {
   color: rgb(255, 0, 0);
 }
+
+.category-header {
+  padding: 25px;
+  text-align: center;
+  color: #03A87C;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.carousel {
+  height: 350px;
+}
+
+.carousel-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.header-button {
+  text-decoration: none;
+  color: #03A87C;
+  font-weight: 500;
+}
+
+.back-button {
+  text-decoration: none;
+  color: #03A87C;
+  font-weight: 500;
+  font-size: large;
+}
+
+.add-to-cart {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0 10px 10px 0;
+  background-color: #03A87C !important;
+}
+
+.card-size {
+  height: 340px;
+}
+
+.card-img {
+  height: 170px;
+  object-fit: cover;
+}
+
+.card-title {
+  height: 30px;
+  font-size: 1rem !important;
+}
+
+.search {
+  margin: 5rem 0 0 0;
+}
