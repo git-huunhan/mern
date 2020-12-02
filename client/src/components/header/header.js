@@ -92,7 +92,7 @@ export default function Header() {
             width="270"
             height="30"
             className="d-inline-block align-top"
-
+            alt="logo"
           />{' '}
         </Navbar.Brand>
         {/* <Navbar.Toggle /> */}
@@ -118,7 +118,7 @@ export default function Header() {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>{isLogin ? 'Login' : 'Register'}</Modal.Title>
+          <Modal.Title>{isLogin ? 'Đăng nhập' : 'Đăng ký'}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           {!isLogin ? <InputGroup className="mb-3">
@@ -134,7 +134,7 @@ export default function Header() {
               onChange={(e) => setName(e.target.value)}
               aria-label="Name"
               aria-describedby="Name"
-              placeholder="Name"
+              placeholder="Tên người dùng"
             />
           </InputGroup> : ''}
           <InputGroup className="mb-3">
@@ -169,7 +169,7 @@ export default function Header() {
               type='password'
               aria-label="Password"
               aria-describedby="Password"
-              placeholder="Password"
+              placeholder="Mật khẩu"
             />
           </InputGroup>
           {!isLogin ? <InputGroup className="mb-3">
@@ -186,18 +186,18 @@ export default function Header() {
               type='password'
               aria-label="Password Confirm"
               aria-describedby="Password Confirm"
-              placeholder="Password Confirm"
+              placeholder="Nhập lại mật khẩu"
             />
           </InputGroup> : ''}
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Cancel
+            Hủy
           </Button>
-          {isLogin ? <Button onClick={loginUser} variant="primary">
-            Login
-          </Button> : <Button onClick={registerUser} variant="primary">
-              Register
+          {isLogin ? <Button className="header-logout" onClick={loginUser} variant="primary">
+            Đăng nhập
+          </Button> : <Button className="header-logout" onClick={registerUser} variant="primary">
+              Đăng ký
           </Button>}
         </Modal.Footer>
       </Modal>

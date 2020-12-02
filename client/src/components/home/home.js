@@ -68,7 +68,7 @@ export default function Home() {
       </Carousel>
 
       <Row>
-        <Col className="category-header">Uống gì hôm nay?</Col>
+        <Col className="category-header">Món ngon mỗi ngày</Col>
       </Row>
 
       <Container>
@@ -87,7 +87,7 @@ export default function Home() {
               else
                 return product
             }).map((product, id) => {
-              return <Col md={3} xs={6}>
+              return <Col className="mb-4" md={3} xs={6}>
                 <Card className="card-size card-item" style={{ margin: 'auto', cursor: 'pointer' }}>
                   <Card.Img className="card-img" variant="top" src={`/images/${product.image}`} />
                   <Card.Body>
@@ -100,18 +100,19 @@ export default function Home() {
                       <i class="fas fa-star-half-alt"></i>
                     </div>
                     <Card.Text className="card-price">{product.price} VNĐ</Card.Text>
-                    <Button className="mt-auto add-to-cart" onClick={() => addProduct(product._id)} variant="primary">Mua ngay</Button>
+                    <Button className="mt-auto add-to-cart button-border" onClick={() => addProduct(product._id)} variant="primary">Mua ngay</Button>
                   </Card.Body>
                 </Card>
               </Col>
             })}
           </Row> : <h3>Loading...</h3>}
-        </> : <Row>
+        </> : <Col>
+            <Row className="category-card">
+              Danh mục sản phẩm
+            </Row>
+            <Row>
             {stalls ? stalls.map(stall => {
               return <Col md={3} xs={6}>
-                <div className="category-card">
-                  Danh mục sản phẩm
-                </div>
                 <Card className="card-item mt-3" onClick={() => setStall(stall._id)} style={{ margin: 'auto', cursor: 'pointer' }}>
                   <Card.Img className="card-img" variant="top" src={`/images/${stall.image}`} />
                   <Card.Body className="pb-0">
@@ -120,7 +121,9 @@ export default function Home() {
                 </Card>
               </Col>
             }) : <Spinner animation="border" />}
-          </Row>
+            </Row>
+           
+          </Col>
       }
       </Container>
     </>

@@ -4,8 +4,6 @@ body {
 
 .image-slide {
   width: 100%;
-  min-height: 70vh;
-  max-height: 70vh;
 }
 
 .plus-icon:hover {
@@ -42,6 +40,7 @@ body {
 .header-logout {
   background-color: #03A87C !important;
   font-weight: bold !important;
+  border-color: #ffffff00 !important;
 }
 
 .back-button {
@@ -60,6 +59,7 @@ body {
 }
 
 .card-size {
+  cursor: pointer !important;
   height: 340px;
 }
 
@@ -130,3 +130,68 @@ body {
   height: 5px;
   background-color: #03A87C;
 } 
+
+.checkout {
+  margin-top: 7rem;
+}
+
+.card-checkout-bill {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(148, 148, 148, 0.096), 0 6px 20px 0 rgba(73, 73, 73, 0.164);
+}
+
+.card-checkout-price {
+  height: fit-content;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(148, 148, 148, 0.096), 0 6px 20px 0 rgba(73, 73, 73, 0.164);
+}
+
+.bill-id {
+  color: #03A87C;
+}
+
+.bill-price {
+  font-weight: bold;
+}
+
+.total-price-title {
+  font-size: larger;
+  font-weight: bold;
+  color: #03A87C;
+  display: flex;
+  justify-content: center;
+}
+
+.button-pay {
+  width: 100%;
+  background-color: #03A87C !important;
+  font-weight: bold !important;
+  border-color: #ffffff00 !important;
+}
+
+.total-price {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.footer-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-logo {
+  width: 300px;
+}
+
+.heart-logo {
+  width: 20px;
+}

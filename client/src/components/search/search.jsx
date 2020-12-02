@@ -57,10 +57,15 @@ const Search = () => {
       <SearchBox onChange={onSearchChange} />
       {
         !stall ? <>
-          <Button onClick={() => setStall('')} style={{ margin: '0 0 8px' }}>Back</Button>
+          <Link className="back-button" to="/">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+            </svg>
+            Trở lại
+          </Link>
           {
             products ?
-              <Row>
+              <Row className="mt-3">
                 {
                   products.filter(product => {
                     if (stall)
@@ -70,13 +75,20 @@ const Search = () => {
                   })
                     .filter((product, idx) => accents.remove(product.name.toLowerCase()).includes(accents.remove(searchField.toLowerCase())))
                     .map((product, idx) => {
-                      return <Col md={3} xs={6} key={idx}>
-                        <Card style={{ margin: 'auto', cursor: 'pointer' }}>
-                          <Card.Img style={{ minHeight: '200px', maxHeight: '200px' }} variant="top" src={`/images/${product.image}`} />
+                      return <Col className="mb-4" md={3} xs={6} key={idx}>
+                        <Card className="card-size card-item">
+                          <Card.Img className="card-img" style={{ minHeight: '200px', maxHeight: '200px' }} variant="top" src={`/images/${product.image}`} />
                           <Card.Body>
-                            <Card.Title>{product.name}</Card.Title>
-                            <Card.Text>{product.price} VNĐ</Card.Text>
-                            <Button onClick={() => addProduct(product._id)} variant="primary">ADD</Button>
+                            <Card.Title className="card-title">{product.name}</Card.Title>
+                            <div className="rating">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <Card.Text className="card-price">{product.price} VNĐ</Card.Text>
+                            <Button className="mt-auto add-to-cart button-border" onClick={() => addProduct(product._id)} variant="primary">Mua ngay</Button>
                           </Card.Body>
                         </Card>
                       </Col>
