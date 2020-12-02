@@ -88,11 +88,18 @@ export default function Home() {
                 return product
             }).map((product, id) => {
               return <Col md={3} xs={6}>
-                <Card className="card-size" style={{ margin: 'auto', cursor: 'pointer' }}>
+                <Card className="card-size card-item" style={{ margin: 'auto', cursor: 'pointer' }}>
                   <Card.Img className="card-img" variant="top" src={`/images/${product.image}`} />
                   <Card.Body>
                     <Card.Title className="card-title">{product.name}</Card.Title>
-                    <Card.Text>{product.price} VNĐ</Card.Text>
+                    <div className="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <Card.Text className="card-price">{product.price} VNĐ</Card.Text>
                     <Button className="mt-auto add-to-cart" onClick={() => addProduct(product._id)} variant="primary">Mua ngay</Button>
                   </Card.Body>
                 </Card>
@@ -102,7 +109,10 @@ export default function Home() {
         </> : <Row>
             {stalls ? stalls.map(stall => {
               return <Col md={3} xs={6}>
-                <Card onClick={() => setStall(stall._id)} style={{ margin: 'auto', cursor: 'pointer' }}>
+                <div className="category-card">
+                  Danh mục sản phẩm
+                </div>
+                <Card className="card-item mt-3" onClick={() => setStall(stall._id)} style={{ margin: 'auto', cursor: 'pointer' }}>
                   <Card.Img className="card-img" variant="top" src={`/images/${stall.image}`} />
                   <Card.Body className="pb-0">
                     <Card.Title>{stall.name}</Card.Title>
@@ -113,13 +123,6 @@ export default function Home() {
           </Row>
       }
       </Container>
-      
-
-      <Row>
-        <Col style={{ margin: "8px 16px 4px", padding: "8px", backgroundColor: "rgb(20, 120, 130)", textAlign: 'center' }}>
-          <Button><Link style={{ color: 'rgb(255, 255, 255)' }} to='/checkout'>Checkout</Link></Button>
-        </Col>
-      </Row>
     </>
   )
 }

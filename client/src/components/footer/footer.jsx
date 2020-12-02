@@ -3,11 +3,14 @@ import { Row, Col, Button } from 'react-bootstrap'
 
 export default function Footer() {
   return (
-    <Row style={{ backgroundColor: "#999", minHeight: '10vh', display: 'flex', alignItems: 'center' }}>
-      <Col style={{ textAlign: "center" }}>Want to have a stall, contact or co-operate</Col>
-      <Col style={{ textAlign: "center" }}>
-        <Button variant="danger">GET IN TOUCH WITH US</Button>
-      </Col>
-    </Row>
+    <Col>
+      <Row className="footer-line">
+      </Row>
+
+      <Row className="footer">
+        <Col>Want to have a stall, contact or co-operate</Col>
+        <Col>Want to have a stall, contact or co-operate</Col>
+      </Row>
+    </Col>
   )
 }

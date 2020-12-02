@@ -40,6 +40,7 @@ function App() {
             pauseOnHover
           />
           <ToastContainer />
+          <Footer />
         </Container>
       </Router>
     </GlobalProvider>

@@ -106,11 +106,12 @@ export default function Header() {
                 user && user.role != 'admin' ?
                   <>
                     <Link
-                      className="mr-3" to='/search'>Search</Link>
-                    <Link to='/checkout' className="mr-3" variant="info">Checkout</Link>
+                      className="mr-3 header-button" to='/search'>Tìm kiếm</Link>
+                    <Link to='/checkout' className="mr-3 header-button" variant="info">Giỏ hàng</Link>
                   </>
                   : ''}{' '}
-              <Button onClick={() => logout()} className="mr-3" variant="primary">Logout</Button>{' '}
+              
+              <Button onClick={() => logout()} className="mr-3 header-logout" variant="primary">Đăng xuất</Button>{' '}
             </>}
         </Navbar.Collapse>
       </Navbar>

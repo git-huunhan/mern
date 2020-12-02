@@ -151,19 +151,20 @@ export default function Admin() {
     isAdmin ? <Row style={{ minHeight: '90vh', paddingTop: 56 }}>
       <Col>
         <Tabs defaultActiveKey="products">
-          <Tab eventKey="products" title="Products">
+          <Tab eventKey="products" title="Sản phẩm">
             <Form.Group style={{ margin: '8px 0 4px' }}>
               <Row>
-                <Col lg={2}>
-                  <Button onClick={handleShowNewProduct}>NEW PRODUCT</Button>
-                </Col>
-                <Col lg={2}><Button onClick={handleShowNewStall}>NEW STALL</Button></Col>
-                <Col lg={3}>
+                <div className="admin-button">
+                  <Button className="header-logout button-border" onClick={handleShowNewProduct}>Thêm sản phẩm</Button>
+                </div>
+                <div className="admin-button">
+                  <Button className="header-logout button-border" onClick={handleShowNewStall}>Thêm danh mục</Button></div>
+                <div className="admin-button">
                   <Form.Control as="select" onChange={e => setSelectedStall(e.target.value)}>
-                    <option value=''>All stalls</option>
+                    <option value=''>Tất cả danh mục</option>
                     {stalls ? stalls.map((stall, index) => <option key={index} value={stall._id}>{stall.name}</option>) : ''}
                   </Form.Control>
-                </Col>
+                </div>
               </Row>
             </Form.Group>
             <Table striped bordered hover style={{ margin: '4px 0' }}>
@@ -171,9 +172,9 @@ export default function Admin() {
                 <tr>
                   <th>#</th>
                   <th></th>
-                  <th>Name</th>
-                  <th>Price</th>
-                  <th>Actions</th>
+                  <th>Tên sản phẩm</th>
+                  <th>Giá tiền</th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>
@@ -185,12 +186,12 @@ export default function Admin() {
                 }).map((product, index) => {
                   return <tr key={index}>
                     <td>{index + 1}</td>
-                    <td> <Card.Img style={{ minWidth: '200px', maxWidth: '200px' }} variant="top" src={`/images/${product.image}`} /></td>
+                    <td className="d-flex justify-content-center"> <Card.Img style={{ minWidth: '200px', maxWidth: '200px' }} variant="top" src={`/images/${product.image}`} /></td>
                     <td>{product.name}</td>
-                    <td>{product.price}</td>
+                    <td>{product.price} VNĐ</td>
                     <td>
-                      <Button onClick={() => deleteProduct(product._id)}>
-                        Delete
+                      <Button className="delete-button button-border" onClick={() => deleteProduct(product._id)}>
+                        Xóa
                       </Button>
                     </td>
                   </tr>
@@ -198,15 +199,15 @@ export default function Admin() {
               </tbody>
             </Table>
           </Tab>
-          <Tab eventKey="bills" title="Bills">
+          <Tab eventKey="bills" title="Đơn hàng">
             <Table striped bordered hover style={{ margin: '8px 0 4px' }}>
               <thead>
                 <tr>
                   <th>#</th>
-                  <th>Name</th>
+                  <th>Tên khách hàng</th>
                   <th>Email</th>
-                  <th>Products Ordered</th>
-                  <th>Date Time Ordered</th>
+                  <th>Sản phẩm</th>
+                  <th>Thời gian đặt hàng</th>
                 </tr>
               </thead>
               <tbody>
@@ -238,9 +239,9 @@ export default function Admin() {
               </tbody>
             </Table>
           </Tab>
-          <Tab eventKey="report" title="Report">
+          <Tab eventKey="report" title="Báo cáo">
             <div className='mt-5 ml-5'>
-              <h3>Download your report</h3>
+              <h3>Tải xuống báo cáo</h3>
               {
                 getDateDuplicates().map((item, index) => {
                   return (
@@ -337,51 +338,51 @@ export default function Admin() {
 
       <Modal show={showNewProduct} onHide={handleCloseNewProduct}>
         <Modal.Header closeButton>
-          <Modal.Title>Create new product</Modal.Title>
+          <Modal.Title>Thêm sản phẩm mới</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
-            <Form.Control onChange={(e) => setName(e.target.value)} style={{ marginBottom: '12px' }} type="text" placeholder="New product's name" />
-            <Form.Control onChange={(e) => setPrice(e.target.value)} style={{ marginBottom: '12px' }} type="number" min={1} placeholder="New product's price" />
+            <Form.Control onChange={(e) => setName(e.target.value)} style={{ marginBottom: '12px' }} type="text" placeholder="Tên sản phẩm" />
+            <Form.Control onChange={(e) => setPrice(e.target.value)} style={{ marginBottom: '12px' }} type="number" min={1} placeholder="Giá tiền" />
             <Form.Group>
               <Form.Control style={{ marginBottom: '12px' }} as="select" onChange={e => setStall2(e.target.value)}>
-                <option value=''>Choose stall of new product</option>
+                <option value=''>Chọn danh mục cho sản phẩm</option>
                 {stalls ? stalls.map((stall, index) => <option key={index} value={stall._id}>{stall.name}</option>) : ''}
               </Form.Control>
               <Form.File
                 onChange={(e) => setSelectedFile(e.target.files[0])}
-                id="" label="Choose image for new product" />
+                id="" label="Chọn hình ảnh sản phẩm" />
             </Form.Group>
           </Form>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseNewProduct}>
-            Cancel
+            Hủy
           </Button>
-          <Button variant="primary" onClick={newProduct}>
-            Save
+          <Button className="header-logout" variant="primary" onClick={newProduct}>
+            Lưu
           </Button>
         </Modal.Footer>
       </Modal>
 
       <Modal show={showNewStall} onHide={handleCloseNewStall}>
         <Modal.Header closeButton>
-          <Modal.Title>Create new stall</Modal.Title>
+          <Modal.Title>Tạo danh mục mới</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
-            <Form.Control onChange={(e) => setName(e.target.value)} style={{ marginBottom: '12px' }} type="text" placeholder="Enter name of new stall" />
+            <Form.Control onChange={(e) => setName(e.target.value)} style={{ marginBottom: '12px' }} type="text" placeholder="Tên danh mục" />
             <Form.Group>
-              <Form.File onChange={(e) => setSelectedFile(e.target.files[0])} id="" label="Choose image for stall" />
+              <Form.File onChange={(e) => setSelectedFile(e.target.files[0])} id="" label="Chọn hình ảnh danh mục" />
             </Form.Group>
           </Form>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseNewStall}>
-            Cancel
+            Hủy
           </Button>
-          <Button variant="primary" onClick={newStall}>
-            Save
+          <Button className="header-logout" variant="primary" onClick={newStall}>
+            Lưu
           </Button>
         </Modal.Footer>
       </Modal>
