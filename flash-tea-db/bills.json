@@ -1,0 +1,4 @@
+{"_id":{"$oid":"5fc77493ca8bbc03b5893ce8"},"createdAt":{"$date":"2020-12-02T10:06:38.995Z"},"user":{"$oid":"5fc76d4cca8bbc03b5893cd2"},"products":"{\"5fc76ca6ca8bbc03b5893cd0\":1,\"5fc76e4bca8bbc03b5893cd3\":1}","__v":0}
+{"_id":{"$oid":"5fc774b1ca8bbc03b5893ce9"},"createdAt":{"$date":"2020-12-02T10:06:38.995Z"},"user":{"$oid":"5fc76d4cca8bbc03b5893cd2"},"products":"{\"5fc76e4bca8bbc03b5893cd3\":1,\"5fc76e90ca8bbc03b5893cd4\":1,\"5fc771eaca8bbc03b5893cde\":1,\"5fc773c0ca8bbc03b5893ce5\":1}","__v":0}
+{"_id":{"$oid":"5fc774ebca8bbc03b5893cea"},"createdAt":{"$date":"2020-12-02T10:06:38.995Z"},"user":{"$oid":"5fc76d4cca8bbc03b5893cd2"},"products":"{\"5fc76fd5ca8bbc03b5893cd8\":2}","__v":0}
+{"_id":{"$oid":"5fc77536ca8bbc03b5893ceb"},"createdAt":{"$date":"2020-12-02T10:06:38.995Z"},"user":{"$oid":"5fc76d4cca8bbc03b5893cd2"},"products":"{\"5fc77388ca8bbc03b5893ce4\":2,\"5fc76ec5ca8bbc03b5893cd5\":1}","__v":0}

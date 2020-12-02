@@ -1,0 +1,2 @@
+{"_id":{"$oid":"5fc76838ca8bbc03b5893ccc"},"role":"admin","createdAt":{"$date":"2020-12-02T10:06:38.941Z"},"name":"admintest","email":"admintest@gmail.com","password":"$2a$10$8yD0ndkWza6ZQ5o3Iw4WtOBhpDoLiXBxIgSEwhGLyfSlboel.mhTG","__v":0}
+{"_id":{"$oid":"5fc76d4cca8bbc03b5893cd2"},"role":"user","createdAt":{"$date":"2020-12-02T10:06:38.941Z"},"name":"usertest","email":"usertest@gmail.com","password":"$2a$10$3UZGkMdosGZVJ1Ss6/YYPO0wiucBAsj5gB0e4NaY3PcGLf0ZNk6C6","__v":0}

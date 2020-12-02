@@ -1,0 +1,23 @@
+{"_id":{"$oid":"5fc76ca6ca8bbc03b5893cd0"},"name":"Trà sữa trân châu đường đen","price":45000,"stall":{"$oid":"5fc76ab6ca8bbc03b5893ccd"},"image":"067a8d4bf2209ac69d26e518205bb999","__v":0}
+{"_id":{"$oid":"5fc76cffca8bbc03b5893cd1"},"name":"Trà sữa truyền thống","price":30000,"stall":{"$oid":"5fc76ab6ca8bbc03b5893ccd"},"image":"377b47cc3b8e55eae5ccd4f525bba28e","__v":0}
+{"_id":{"$oid":"5fc76e4bca8bbc03b5893cd3"},"name":"Trà sữa dâu","price":45000,"stall":{"$oid":"5fc76ab6ca8bbc03b5893ccd"},"image":"39458b0cbbb930c6b8d811dfa9371af3","__v":0}
+{"_id":{"$oid":"5fc76e90ca8bbc03b5893cd4"},"name":"Trà sữa táo","price":35000,"stall":{"$oid":"5fc76ab6ca8bbc03b5893ccd"},"image":"f49f8c0ef878b9c2787661e0bc1be79f","__v":0}
+{"_id":{"$oid":"5fc76ec5ca8bbc03b5893cd5"},"name":"Trà sữa matcha","price":45000,"stall":{"$oid":"5fc76ab6ca8bbc03b5893ccd"},"image":"0ea923d645ef570403457dfb711e9684","__v":0}
+{"_id":{"$oid":"5fc76f3fca8bbc03b5893cd6"},"name":"Trà sữa cheese","price":50000,"stall":{"$oid":"5fc76ab6ca8bbc03b5893ccd"},"image":"0734815e31ea6f1a6ebd1a3e8decd65c","__v":0}
+{"_id":{"$oid":"5fc76f7eca8bbc03b5893cd7"},"name":"Trà sữa cafe","price":43000,"stall":{"$oid":"5fc76ab6ca8bbc03b5893ccd"},"image":"47fc3cfb3df469871ee66970cf01fdc8","__v":0}
+{"_id":{"$oid":"5fc76fd5ca8bbc03b5893cd8"},"name":"Trà sữa việt quất","price":48000,"stall":{"$oid":"5fc76ab6ca8bbc03b5893ccd"},"image":"e95e041ca3fbf9da6bc1af854fec7866","__v":0}
+{"_id":{"$oid":"5fc77043ca8bbc03b5893cd9"},"name":"Trà sữa Thái xanh","price":42000,"stall":{"$oid":"5fc76ab6ca8bbc03b5893ccd"},"image":"108f87795bcbbb9874c43b9d9a01c2da","__v":0}
+{"_id":{"$oid":"5fc7706cca8bbc03b5893cda"},"name":"Trà sữa Thái đỏ","price":43000,"stall":{"$oid":"5fc76ab6ca8bbc03b5893ccd"},"image":"6e1c6a446781d345265242f8543041a1","__v":0}
+{"_id":{"$oid":"5fc770aeca8bbc03b5893cdb"},"name":"Trà sữa chocolate","price":50000,"stall":{"$oid":"5fc76ab6ca8bbc03b5893ccd"},"image":"f5f15e114399e54541fb10213d820762","__v":0}
+{"_id":{"$oid":"5fc770ebca8bbc03b5893cdc"},"name":"Trà sữa kiwi","price":35000,"stall":{"$oid":"5fc76ab6ca8bbc03b5893ccd"},"image":"41270ae3a6502535b37f560154ef5601","__v":0}
+{"_id":{"$oid":"5fc771a7ca8bbc03b5893cdd"},"name":"Sting dâu","price":10000,"stall":{"$oid":"5fc76b0dca8bbc03b5893cce"},"image":"883f459bc16642904d05b042d2448e8c","__v":0}
+{"_id":{"$oid":"5fc771eaca8bbc03b5893cde"},"name":"Coca Cola","price":10000,"stall":{"$oid":"5fc76b0dca8bbc03b5893cce"},"image":"eb39baf63f2cd3f27e99b280e2bd29ca","__v":0}
+{"_id":{"$oid":"5fc77217ca8bbc03b5893cdf"},"name":"Pepsi","price":10000,"stall":{"$oid":"5fc76b0dca8bbc03b5893cce"},"image":"a3f3326bab9cba1a39ebd290d2ec313a","__v":0}
+{"_id":{"$oid":"5fc77237ca8bbc03b5893ce0"},"name":"Xá xị","price":10000,"stall":{"$oid":"5fc76b0dca8bbc03b5893cce"},"image":"9c91d3cd1a7570fc483417ef3a6dccfa","__v":0}
+{"_id":{"$oid":"5fc7728fca8bbc03b5893ce1"},"name":"Number one","price":10000,"stall":{"$oid":"5fc76b0dca8bbc03b5893cce"},"image":"d973ce96078541050ac3b7c1f338fa44","__v":0}
+{"_id":{"$oid":"5fc772cfca8bbc03b5893ce2"},"name":"Trà xanh không độ","price":10000,"stall":{"$oid":"5fc76b0dca8bbc03b5893cce"},"image":"82620a1752591922cdd045e79c2e8cd6","__v":0}
+{"_id":{"$oid":"5fc77350ca8bbc03b5893ce3"},"name":"Bánh tráng trộn","price":15000,"stall":{"$oid":"5fc76bebca8bbc03b5893ccf"},"image":"6f793b916f35d52052598111f3be5ebb","__v":0}
+{"_id":{"$oid":"5fc77388ca8bbc03b5893ce4"},"name":"Bánh gạo cay","price":20000,"stall":{"$oid":"5fc76bebca8bbc03b5893ccf"},"image":"da19a54995a77a6165c3557461da675f","__v":0}
+{"_id":{"$oid":"5fc773c0ca8bbc03b5893ce5"},"name":"Xoài lắc","price":20000,"stall":{"$oid":"5fc76bebca8bbc03b5893ccf"},"image":"ac2d571b4717d922b960219a70d6fb21","__v":0}
+{"_id":{"$oid":"5fc77448ca8bbc03b5893ce6"},"name":"Khoai tây chiên","price":25000,"stall":{"$oid":"5fc76bebca8bbc03b5893ccf"},"image":"aea07c913958650e2daf872df2089266","__v":0}
+{"_id":{"$oid":"5fc77474ca8bbc03b5893ce7"},"name":"Khoai tây lắc phômai","price":30000,"stall":{"$oid":"5fc76bebca8bbc03b5893ccf"},"image":"120fe5a6f1b44ef29058be585f2da033","__v":0}
